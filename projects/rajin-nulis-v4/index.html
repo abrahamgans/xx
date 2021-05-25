@@ -1,0 +1,438 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="MFarelS">
+  <meta name="description" content="Nulis Buku Online By MFarelS">
+  <meta name="keywords" content="MFarelS, MFarelSZ, Farel, Zahra, Nur Azahra, M Farel S, M Farel S Z, NurAzahra, mfarelsz.xyz, http://mfarelsz.xyz, https://mfarelsz.xyz, http mfarelsz xyz, https mfarelsz xyz, mfarels, mfarelsz, mfarelsz.xyz, Muhammad Farel Syahtiawan, Muhammad Farel, Muhammad, Farel Muhammad Syahtiawan, Farel Syahtiawan Muhammad, Syahtiawan Farel Muhammad, Syahtiawan Muhammad Farel, nurazahra.xyz, Farell, MFarel, FarelS, MFarelS CH, github mfarels, MFarelS Website, MFarelS API, MFarelSZ Website, MFarelSZ API, FarelZahra, Farelll, Zahraaa, MFarelSNurAzahra, Data Covid 19, Rajin Nulis, Bot Nulis, TikTok Generator, YouTube Generator, API Nulis, Rest Api Nulis, Harta Tahta, Harta, Tahta, Harta Tahta Generator, Harta Tahta API, Rest Api Harta Tahta, Nulis Online, Nulis Website, Nulis Buku Online, buat kamu, buat-kamu, dzikir, dzikir online, halah Generator, hilih Generator, huluh Generator, heleh Generator, holoh Generator, halah, hilih, huluh, heleh, holoh, Generator, jam, game, simple game, miniature, miniatur">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/MFarelS/MFarelS/master/MFarelS.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MFarelS/MFarelS/master/MFarelS.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mfarelsz.xyz/" />
+  <meta property="og:title" content="MFarelSZ | Rajin Nulis V4" />
+  <meta property="og:description" content="Nulis Buku Online By MFarelS">
+  <meta property="og:site_name" content="MFarelSZ">
+  <link rel="canonical" href="https://mfarelsz.xyz/">
+  <link rel="author" href="http://mfarelsz.xyz/">
+  <title>MFarelSZ | Rajin Nulis V4</title>
+
+<link href="https://jnckmedia.com/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="https://jnckmedia.com/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<link href="https://jnckmedia.com/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<div id="sidebar-menu">
+<ul class="metismenu" id="side-menu">
+<li>
+</a>
+</li>
+</ul>
+</div>
+ <div class="clearfix"></div>
+</div>
+
+</div>
+
+<div class="form-row">
+<div class="form-group col-md-6">
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="font">Pilih Font</label>
+<select class="form-control" id="font" onchange="localStorage.setItem('fontIndex', this.value);setup()"></select>
+</div>
+<div class="form-group col-md-6">
+<label for="font">Pilih Kertas</label>
+<select class="form-control" id="book" onchange="localStorage.setItem('bookIndex', this.value);setup()"></select>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-12" id="detpiker">
+<label for="date">Hari/Tanggal/Bulan/Tahun</label>
+<div class="col-sm-12">
+<div class="input-group">
+<input type="text" class="form-control" id="date">
+<div class="input-group-append">
+<span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="name">Nama</label>
+<input type="text" class="form-control" id="name" oninput="txtName = this.value" placeholder="Nama : MFarelS">
+</div>
+<div class="form-group col-md-6">
+<label for="name">Kelas / NIM</label>
+<input type="text" class="form-control" id="kelas" oninput="txtKelas = this.value" placeholder="Kelas : 7B">
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-12">
+<label for="name">Mapel/Absen</label>
+<input type="text" class="form-control" id="fakultas" oninput="txtFakultas = this.value" placeholder="Mapel : TIK, Absen : 24">
+</div>
+</div>
+<div class="form-group">
+<label for="comment">Teks :</label>
+<textarea class="form-control" id="content" rows="10" oninput="txtContent = this.value" placeholder="MFarelSZ Website"></textarea>
+</div>
+<div class="form-group">
+<button class="btn btn-primary g-recaptcha" onclick="downloadCanvas(document.getElementById('defaultCanvas0'), 'MFarelSZ.png')">Unduh Hasil</button>
+<button class="btn btn-primary float-right" type="button" onclick="javascript:eraseText();">Hapus Semua</button>
+</div>
+</div>
+<div class="form-group col-md-6">
+<main class="paper-container"></main>
+
+
+</div> </div>
+</div>
+</div>
+</div> 
+</div> 
+
+</div>
+
+
+
+</div>
+<a href="https://mfarelsz.xyz/">Dev By MFarelSZ.xyz</a>
+<script src="https://jnckmedia.com/assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous"></script>
+<script type="text/javascript">
+                function eraseText() {
+                    $("#date").val('');
+                    $("#name").val('');
+                    $("#kelas").val('');
+                    $("#content").val('');
+
+                    txtDate = '';
+                    txtName = '';
+                    txtFakultas = '';
+                    txtKelas = '';
+                    txtContent = '';
+                }
+
+                function parseDate(input) {
+                    let parts = input.split('/');
+                    return new Date(parts[2], parts[1]-1, parts[0]);
+                }
+
+                function getName(day) {
+                    if (day == 0) return 'Minggu';
+                    else if (day == 1) return 'Senin';
+                    else if (day == 2) return 'Selasa';
+                    else if (day == 3) return 'Rabu';
+                    else if (day == 4) return 'Kamis';
+                    else if (day == 5) return 'Jumat';
+                    return 'Sabtu';
+                }
+                
+                $('#detpiker input').datepicker({
+                    format: "dd/mm/yyyy",
+                    todayBtn: "linked",
+                    language: "id",
+                    autoclose: true,
+                    
+                }).on('changeDate', function (ev) {
+                    const d = parseDate($(this).val());
+                    txtDate = getName(d.getDay()) + ", " + $(this).val();
+                });;
+        </script>
+
+<script src="https://jnckmedia.com/assets/js/vendor.min.js"></script>
+
+
+
+<script src="https://jnckmedia.com/assets/libs/jquery-knob/jquery.knob.min.js"></script>
+
+
+<script src="https://jnckmedia.com/assets/js/app.min.js"></script>
+
+<script type='text/javascript'>
+    function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/Arlina-Design/quasar@master/arlinablock.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+</script> <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+<script>
+            let bg, font, paper, margin, gap, fontsize = 16;
+            let txtDate = '',
+            txtName = '',
+            txtFakultas = '',
+            txtKelas = '',
+            txtContent = '';
+
+            let fonts = [
+      { 'index': 0,
+        'name': 'HandwritingCR 2',
+        'file': 'HandwritingCR-2.ttf'
+      },
+      {
+        'index': 1,
+        'name': 'Gloria Hallelujah',
+        'file': 'GloriaHallelujah-Regular.ttf'
+      },
+      {
+        'index': 2,
+        'name': 'Zahraaa',
+        'file': 'Zahraaa.ttf'
+      },
+      {
+        'index': 3,
+        'name': 'Shadows Into Light',
+        'file': 'ShadowsIntoLight-Regular.ttf'
+      },
+      {
+        'index': 4,
+        'name': 'My Handwriting',
+        'file': 'My_handwriting.ttf'
+      },
+      {
+        'index': 5,
+        'name': 'My Hands Are Holding You',
+        'file': 'MyHandsareHoldingYou.ttf'
+      },
+      {
+        'index': 6,
+        'name': 'Convered By Your Grace',
+        'file': 'Convered-By-Your-Grace.ttf'
+      },
+      {
+        'index': 7,
+        'name': '99% Hand Writting',
+        'file': '99HandWritting.ttf'
+      },
+      {
+        'index': 8,
+        'name': 'And This Happened',
+        'file': 'And-This-Happened.ttf'
+      },
+      {
+        'index': 9,
+        'name': 'AS Melanie Handwritting',
+        'file': 'ASMelanieHandwritting.ttf'
+      },
+      {
+        'index': 10,
+        'name': 'Edoms Handwritting Normal',
+        'file': 'Edoms-Handwritting-Normal.ttf'
+      },
+      {
+        'index': 11,
+        'name': 'Kempton Demo Handwritting',
+        'file': 'Kempton-Demo-Handwritting.ttf'
+      },
+      {
+        'index': 12,
+        'name': 'Michelle Handwritting',
+        'file': 'michellehandwritting.ttf'
+      },
+      {
+        'index': 13,
+        'name': 'Nadeznas Handwritting',
+        'file': 'Nadeznas-Handwritting.ttf'
+      }, 
+      {
+        'index': 14,
+        'name': '212 Baby Girl', 
+        'file': '212BabyGirl.otf'
+      }, 
+      {
+        'index': 15,
+        'name': '212 Leahlee Sans', 
+        'file': '212LeahleeSans.ttf'
+      }, 
+      {
+        'index': 16,
+        'name': 'A Calling Font D by 7N Types', 
+        'file': 'ACallingFontDby7NTypes.otf'
+      }, 
+      {
+        'index': 17,
+        'name': 'A Casual Handwritten Pen Noncommercial', 
+        'file': 'ACasualHandwrittenPenNoncommercial.ttf'
+      }, 
+      {
+        'index': 18,
+        'name': 'A Day in September.otf', 
+        'file': 'ADayinSeptember.otf'
+      }, 
+      {
+        'index': 19,
+        'name': 'A Little Sunshine', 
+        'file': 'Alittlesunshine.ttf'
+      }, 
+      {
+        'index': 20,
+        'name': 'Angelina', 
+        'file': 'angelina.ttf'
+      }, 
+      {
+        'index': 21,
+        'name': 'Avenir Condensed Hand', 
+        'file': 'AvenirCondensedHand.ttf'
+      }, 
+      {
+        'index': 22,
+        'name': 'Avocados', 
+        'file': 'Avocados.ttf'
+      }, 
+      {
+        'index': 23,
+        'name': 'Babby Doll', 
+        'file': 'BabyDoll.ttf'
+      }, 
+      {
+        'index': 24,
+        'name': 'Battle Of King', 
+        'file': 'BattleOfKingsRegular.ttf'
+      }, 
+      {
+        'index': 25,
+        'name': 'Bray Notes', 
+        'file': 'BrayNotes.ttf'
+      }
+            ];
+
+            let papers = [
+                {
+                    'index': 0,
+                    'name': 'Kertas 1',
+                    'file': 'foliojelas.jpg'
+                },
+                {
+                    'index': 1,
+                    'name': 'Kertas 2',
+                    'file': 'foliobiru.jpg'
+                }
+            ];
+
+            let getFontIndex = () => {
+                let fontIndex = localStorage.getItem('fontIndex');
+                if (fontIndex) {
+                    return fonts[fontIndex];
+                }
+                return fonts[0];
+            }
+
+            let getPaperIndex = () => {
+                let paperIndex = localStorage.getItem('bookIndex');
+                if (paperIndex) {
+                    return papers[paperIndex];
+                }
+                return papers[0];
+            }
+
+            // canvas
+            function preload() {
+
+            }
+
+            function setup() {
+                // ukuran asli gambar 300x441
+                createCanvas(300 * 2, 447 * 2);
+                bg = loadImage('assets/' + getPaperIndex().file);
+                font = loadFont('fonts/' + getFontIndex().file);
+
+                textFont(font);
+                textSize(fontsize);
+            }
+
+            function draw() {
+                // fix_dpi();
+                background(bg);
+                if(getPaperIndex().index === 0 || getPaperIndex().index === 1){
+                    margin = 20;
+                    if(getPaperIndex().index === 1){
+                        fill(0, 0, 0, 300);
+                    } else {
+                        fill(0, 0, 0, 200);
+                    }
+                    
+                    translate(margin - 8, margin * 4);
+
+                    if(txtName && txtKelas && !txtFakultas){
+                        text(txtName, 0, -20);
+                        text(txtKelas, 0, 0);
+                    } else if(txtName && !txtKelas && txtFakultas){
+                        text(txtName, 0, -20);
+                        text(txtFakultas, 0, 0);
+                    } else if(txtName && !txtKelas && !txtFakultas){
+                        text(txtName, 0, 0);
+                    } else if(txtName && txtKelas && txtFakultas){
+                        text(txtName, 0, -40);
+                        text(txtKelas, 0, -20);
+                        text(txtFakultas, 0, 0);
+                    }
+
+                    text(txtDate, 450, 0);
+                    translate(0, margin + 7);
+
+                    text(txtContent, 0, 0, 580 /*, 800 */ );
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', (e) => {
+                let fontSelectEl = document.getElementById('font');
+                let fontSelectOptionTemplate = (index, name) => {
+                    let _selected = (index == getFontIndex().index) ? 'selected' : '';
+                    return `<option value="${index}" ${_selected}>${name}</option>`;
+                }
+                let _temp = '';
+                fonts.forEach((font, index) => {
+                    _temp += fontSelectOptionTemplate(index, font.name);
+                });
+                fontSelectEl.innerHTML = _temp;
+            });
+
+            document.addEventListener('DOMContentLoaded', (e) => {
+                let paperSelectEl = document.getElementById('book');
+                let paperSelectOptionTemplate = (index, name) => {
+                    let _selected = (index == getPaperIndex().index) ? 'selected' : '';
+                    return `<option value="${index}" ${_selected}>${name}</option>`;
+                }
+                let _temp = '';
+                papers.forEach((paper, index) => {
+                    _temp += paperSelectOptionTemplate(index, paper.name);
+                });
+                paperSelectEl.innerHTML = _temp;
+            });
+        </script>
+<script>
+            function downloadCanvas(c, filename) {
+                var lnk = document.createElement('a'), e;
+                lnk.download = filename
+                lnk.href = c.toDataURL();
+                if (document.createEvent) {
+                    e = document.createEvent("MouseEvents");
+                    e.initMouseEvent("click", true, true, window,
+                        0, 0, 0, 0, 0, false, false, false,
+                        false, 0, null);
+                    lnk.dispatchEvent(e);
+                } else if (lnk.fireEvent) {
+                    lnk.fireEvent("onclick");
+                }
+            }
+
+            function fix_dpi() {
+                let canvas = document.getElementById('defaultCanvas0');
+                let dpi = window.devicePixelRatio;
+                let style = {
+                    height() {
+                        return +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
+                    },
+                    width() {
+                        return +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
+                    }
+                }
+                canvas.setAttribute('width', style.width() * dpi);
+                canvas.setAttribute('height', style.height() * dpi);
+            }
+        </script>
+</body>
+</html>

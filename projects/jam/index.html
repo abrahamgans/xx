@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="MFarelS">
+  <meta name="description" content="Jam Sekarang">
+  <meta name="keywords" content="MFarelS, MFarelSZ, Farel, Zahra, Nur Azahra, M Farel S, M Farel S Z, NurAzahra, mfarelsz.xyz, http://mfarelsz.xyz, https://mfarelsz.xyz, http mfarelsz xyz, https mfarelsz xyz, mfarels, mfarelsz, mfarelsz.xyz, Muhammad Farel Syahtiawan, Muhammad Farel, Muhammad, Farel Muhammad Syahtiawan, Farel Syahtiawan Muhammad, Syahtiawan Farel Muhammad, Syahtiawan Muhammad Farel, nurazahra.xyz, Farell, MFarel, FarelS, MFarelS CH, github mfarels, MFarelS Website, MFarelS API, MFarelSZ Website, MFarelSZ API, FarelZahra, Farelll, Zahraaa, MFarelSNurAzahra, Data Covid 19, Rajin Nulis, Bot Nulis, TikTok Generator, YouTube Generator, API Nulis, Rest Api Nulis, Harta Tahta, Harta, Tahta, Harta Tahta Generator, Harta Tahta API, Rest Api Harta Tahta, Nulis Online, Nulis Website, Nulis Buku Online, buat kamu, buat-kamu, dzikir, dzikir online, halah Generator, hilih Generator, huluh Generator, heleh Generator, holoh Generator, halah, hilih, huluh, heleh, holoh, Generator, jam, game, simple game, miniature, miniatur">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/MFarelS/MFarelS/master/MFarelS.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MFarelS/MFarelS/master/MFarelS.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mfarelsz.xyz/" />
+  <meta property="og:title" content="MFarelSZ | Jam" />
+  <meta property="og:description" content="Jam Sekarang">
+  <meta property="og:site_name" content="MFarelSZ">
+  <link rel="canonical" href="https://mfarelsz.xyz/">
+  <link rel="author" href="http://mfarelsz.xyz/">
+  <title>MFarelSZ | Jam</title>
+<canvas id="canvas" width="400" height="400"
+style="background-color:#333">
+</canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+
+</body>
+</html>
